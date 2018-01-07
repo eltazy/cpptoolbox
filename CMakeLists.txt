@@ -17,6 +17,7 @@ set(test-sources
 	${test-dir}/int_type.cxx
 	${test-dir}/sizeof_tuple.cxx
 	${test-dir}/marshall.cxx
+	${test-dir}/record.cxx
 )
 
 add_executable(tests ${test-sources})
