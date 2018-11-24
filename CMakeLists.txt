@@ -50,6 +50,7 @@ file(GLOB toolbox-gcc-headers "${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/gcc/*
 file(GLOB toolbox-marshall-headers "${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/marshall/*.hpp")
 file(GLOB toolbox-std-headers "${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/std/*.hpp")
 file(GLOB toolbox-testing-headers "${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/testing/*.h")
+file(GLOB toolbox-headers "${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/*.hpp")
 set(toolbox-config-header ${CMAKE_CURRENT_SOURCE_DIR}/include/toolbox/config.h)
 
 install(FILES ${json-headers} DESTINATION include/json)
@@ -64,3 +65,4 @@ install(FILES ${toolbox-marshall-headers} DESTINATION include/toolbox/marshall)
 install(FILES ${toolbox-std-headers} DESTINATION include/toolbox/std)
 install(FILES ${toolbox-testing-headers} DESTINATION include/toolbox/testing)
 install(FILES ${toolbox-config-header} DESTINATION include/toolbox/)
+install(FILES ${toolbox-headers} DESTINATION include/toolbox/)
