@@ -27,6 +27,7 @@ set(osless-sources
 	stack_allocator.cxx
 	static_config.cxx
 	tests_point.cxx
+	tests_rect.cxx
 )
 
 set(requires-exceptions-sources
