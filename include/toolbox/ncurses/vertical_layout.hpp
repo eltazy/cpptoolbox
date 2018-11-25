@@ -83,7 +83,7 @@ public:
 			// WTF: will draw wrongly when call order (move, resize) is different
 			windows_[i]->resize(COLS, layoutSpec[i].calculated);
 			windows_[i]->move(0, line);
-			windows_[i]->refresh();
+			windows_[i]->update();
 
 			line += layoutSpec[i].calculated;
 		}

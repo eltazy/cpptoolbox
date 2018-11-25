@@ -37,6 +37,11 @@ private:
 			return res;
 		}
 
+		int putc(int c)
+		{
+			::waddch(window_, c);
+		}
+
 		void clear()
 		{
 			wclear(window_);
@@ -47,6 +52,11 @@ private:
 	};
 
 public:
+	window()
+		: window_ (newwin(1, 1, 0, 0))
+		, rect_ {{0, 0}, {1, 1}}
+	{}
+
 	window(toolbox::rect<int> r)
 		: window_ (newwin(r.height(), r.width(), r.top_left.y, r.top_left.x))
 		, rect_ (r)
@@ -69,14 +79,33 @@ public:
 		return draw_functions(window_);
 	}
 
-	void refresh()
+	void update()
+	{
+		// clear screen
+		clear();
+
+		// client repaint
+		redraw();
+
+		// show contents on screen
+		refresh();
+	}
+
+	void clear()
 	{
 		::wclear(window_);
-		redraw();
+	}
+
+	void refresh()
+	{
 		::wrefresh(window_);
 	}
 
 	virtual void redraw()
+	{
+	}
+
+	virtual void keypressed(int)
 	{
 	}
 
