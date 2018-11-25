@@ -2,7 +2,7 @@
 
 #include <toolbox/std/utility.hpp>
 
-namespace cpptoolbox
+namespace toolbox
 {
 namespace cpp
 {
@@ -13,6 +13,10 @@ template<
 >
 struct named_type
 {
+    named_type()
+        : value_ (T{})
+    {}
+
     explicit named_type(const T& t)
         : value_ (t)
     {
