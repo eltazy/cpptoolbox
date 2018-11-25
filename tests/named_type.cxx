@@ -1,7 +1,7 @@
 #include <toolbox/testing/test.h>
 #include <toolbox/cpp/named_type.hpp>
 
-using MyInt = cpptoolbox::cpp::named_type<int, struct MyIntTag>;
+using MyInt = toolbox::cpp::named_type<int, struct MyIntTag>;
 
 int foo(MyInt a)
 {
