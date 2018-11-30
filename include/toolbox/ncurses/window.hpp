@@ -47,6 +47,11 @@ private:
 			wclear(window_);
 		}
 
+		void move(int x, int y)
+		{
+			wmove(window_, y, x);
+		}
+
 	private:
 		WINDOW *window_;
 	};
@@ -134,6 +139,16 @@ public:
 		rect_.set_height(height);
 		wresize(window_, height, width);
 	}
+
+    constexpr auto width() const
+    {
+        return rect_.width();
+    }
+
+    constexpr auto height() const
+    {
+        return rect_.height();
+    }
 
 private:
 	WINDOW *window_;
